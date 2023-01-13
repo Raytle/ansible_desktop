@@ -8,4 +8,27 @@
     package:
       name:
         - htop
+        - python3
+        - spacefm
+        - geany
+        - obs-studio
+        - xbindkeys
+        - kitty
+        - flameshot
+        - autokey-gtk
+        - ncdu
+        - viewnior
+        - nomacs
+        - mpv
+        - audacious
+        - xsel hunspell-es
+        - gparted
+        - chromium-browser
+        - qpdfview
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
 
