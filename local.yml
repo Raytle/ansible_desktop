@@ -21,7 +21,8 @@
         - nomacs
         - mpv
         - audacious
-        - xsel hunspell-es
+        - xsel
+        - hunspell-es
         - gparted
         - chromium-browser
         - qpdfview
