@@ -29,7 +29,7 @@
 
   - name: copy wallpaper file
     copy:
-      src: /home/y/github_stuff/ansible_desktop/Pictures
+      src: /home/y/github_stuff/ansible_desktop/Pictures/wallpaper.jpg
       dest: /usr/share/backgrounds/ansible-wallpaper.jpg
       owner: root
       group: root
