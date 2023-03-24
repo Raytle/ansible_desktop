@@ -26,10 +26,11 @@
         - gparted
         - chromium-browser
         - qpdfview
+        - python3-psuti
 
   - name: copy wallpaper file
     copy:
-      src: /home/y/Pictures/wallpaper.jpg
+      src: /home/y/github_stuff/ansible_desktop/Pictures
       dest: /usr/share/backgrounds/ansible-wallpaper.png
       owner: root
       group: root
