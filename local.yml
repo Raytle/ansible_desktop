@@ -30,7 +30,7 @@
   - name: copy wallpaper file
     copy:
       src: /home/y/github_stuff/ansible_desktop/Pictures
-      dest: /usr/share/backgrounds/ansible-wallpaper.png
+      dest: /usr/share/backgrounds/ansible-wallpaper.jpg
       owner: root
       group: root
 
@@ -38,7 +38,7 @@
     become_user: y
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: set wallpaper position
     become_user: y
