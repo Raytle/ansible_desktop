@@ -26,3 +26,23 @@
         - gparted
         - chromium-browser
         - qpdfview
+
+  - name: copy wallpaper file
+    copy:
+      src: /home/y/Pictures/wallpaper.jpg
+      dest: /usr/share/backgrounds/ansible-wallpaper.png
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    become_user: y
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
+
+  - name: set wallpaper position
+    become_user: y
+    dconf:
+      key: "/org/gnome/desktop/background/picture-options"
+      value: "'zoom'"
+
