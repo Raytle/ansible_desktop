@@ -26,7 +26,6 @@
         - gparted
         - chromium-browser
         - qpdfview
-        - python3-psuti
 
   - name: copy wallpaper file
     copy:
