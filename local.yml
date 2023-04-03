@@ -55,13 +55,13 @@
 
   - name: add ansible user
     user:
-      name: user_I_created_to_automatically_update_ansible
+      name: user_to_update_ansible
       system: yes
 
   - name: set up sudo for ansible user
     copy:
-      src: /home/y/github_stuff/ansible_desktop/Configuration_Files/sudoer_user_I_created_to_automatically_update_ansible
-      dest: /etc/sudoers.d/user_I_created_to_automatically_update_ansible
+      src: /home/y/github_stuff/ansible_desktop/Configuration_Files/sudoer_user_to_update_ansible
+      dest: /etc/sudoers.d/user_to_update_ansible
       owner: root
       group: root
       mode: 0440
