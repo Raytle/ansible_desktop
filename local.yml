@@ -46,3 +46,31 @@
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
 
+  - name: copy .bashrc file
+    copy:
+     src: /home/y/github_stuff/ansible_desktop/Configuration_Files/bashrc
+     dest: /home/y/.bashrc
+     owner: y
+     group: y
+
+  - name: add ansible user
+    user:user_I_created_to_automatically_update_ansible
+      name: automatically_update_ansible
+      system: yes
+
+  - name: set up sudo for ansible user
+    copy:
+      src: /home/y/github_stuff/ansible_desktop/Configuration_Files/sudoer_user_I_created_to_automatically_update_ansible
+      dest: /etc/sudoers.d/user_I_created_to_automatically_update_ansible
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: user_I_created_to_automatically_update_ansible
+      minute: "*/60"
+      job: ansible-pull -o -U https://github.com/Raytle/ansible_desktop.git
+
+

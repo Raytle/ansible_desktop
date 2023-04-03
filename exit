@@ -1,0 +1,28 @@
+[1mdiff --git a/local.yml b/local.yml[m
+[1mindex fbd5528..86933ca 100644[m
+[1m--- a/local.yml[m
+[1m+++ b/local.yml[m
+[36m@@ -26,3 +26,23 @@[m
+         - gparted[m
+         - chromium-browser[m
+         - qpdfview[m
+[32m+[m
+[32m+[m[32m  - name: copy wallpaper file[m
+[32m+[m[32m    copy:[m
+[32m+[m[32m      src: /home/y/Pictures/wallpaper.jpg[m
+[32m+[m[32m      dest: /usr/share/backgrounds/ansible-wallpaper.png[m
+[32m+[m[32m      owner: root[m
+[32m+[m[32m      group: root[m
+[32m+[m
+[32m+[m[32m  - name: set wallpaper[m
+[32m+[m[32m    become_user: y[m
+[32m+[m[32m    dconf:[m
+[32m+[m[32m      key: "/org/gnome/desktop/background/picture-uri"[m
+[32m+[m[32m      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"[m
+[32m+[m
+[32m+[m[32m  - name: set wallpaper position[m
+[32m+[m[32m    become_user: y[m
+[32m+[m[32m    dconf:[m
+[32m+[m[32m      key: "/org/gnome/desktop/background/picture-options"[m
+[32m+[m[32m      value: "'zoom'"[m
+[41m+[m

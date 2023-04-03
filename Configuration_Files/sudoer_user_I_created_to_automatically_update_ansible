@@ -1,0 +1,1 @@
+sudoer_user_I_created_to_automatically_update_ansible ALL=(ALL) NOPASSWD: ALL
