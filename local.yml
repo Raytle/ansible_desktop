@@ -54,8 +54,8 @@
      group: y
 
   - name: add ansible user
-    user:user_I_created_to_automatically_update_ansible
-      name: automatically_update_ansible
+    user:
+      name: user_I_created_to_automatically_update_ansible
       system: yes
 
   - name: set up sudo for ansible user
